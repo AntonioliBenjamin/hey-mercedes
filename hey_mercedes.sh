@@ -5,7 +5,8 @@ restart () { source ./hey_mercedes.sh hey_mercedes; };
 if [ "$1" == "hey_mercedes" ]; then
 	echo "Bonjour, comment puis-je vous aider aujourd'hui?";
         read input;
-else	echo "Je n'ai pas saisi votre demande" && exit;
+else	
+	echo "Je n'ai pas saisi votre demande" && exit;
 fi
 
 if [ "$input" == "weather" ]; then
