@@ -47,5 +47,6 @@ elif [ "$input" == "bye_mercedes" ]; then
 
 else
 	echo "Pardon?";
+	echo "À bientôt !";
 	restart;
 fi
