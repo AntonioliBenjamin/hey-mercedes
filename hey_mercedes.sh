@@ -43,10 +43,10 @@ elif [ "$input" == "quoteday" ]; then
 		fi
 
 elif [ "$input" == "bye_mercedes" ]; then
+	echo "À bientôt !";
 	exit;
 
 else
 	echo "Pardon?";
-	echo "À bientôt !";
 	restart;
 fi
