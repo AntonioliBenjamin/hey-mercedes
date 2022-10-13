@@ -2,6 +2,8 @@
 
 restart () { source ./hey_mercedes.sh hey_mercedes; };
 
+source ./check_connection.sh;
+
 if [ "$1" == "hey_mercedes" ]; then
 	echo "Bonjour, comment puis-je vous aider aujourd'hui?";
         read input;
@@ -10,7 +12,7 @@ else
 fi
 
 if [ "$input" == "weather" ]; then
-	source ./check_connection.sh
+
 # La variable status est crée dans le fichier check_connection.sh	
 		if [ "$status" == "online" ]; then
 			source ./weather_api.sh;
@@ -21,7 +23,6 @@ if [ "$input" == "weather" ]; then
 		fi
 
 elif  [ "$input" == "address" ]; then
-	source ./check_connection.sh
 		
 		if [ "$status" == "online" ]; then
 			source ./address_api.sh;
@@ -32,7 +33,6 @@ elif  [ "$input" == "address" ]; then
 		fi
 
 elif [ "$input" == "quoteday" ]; then
-	source ./check_connection.sh
 		
 		if [ "$status" == "online" ]; then
 			source ./quoteday_api.sh;
